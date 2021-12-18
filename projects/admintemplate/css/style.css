@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mulish:wght@300&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* START NAVBAR  */
+
+/* Start Left Sidebar  */
+.sidebars{
+    height: 100vh;
+
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),url('../assets/img/etc/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 5px 0 25px #999;
+}
+
+.borderbottoms{
+    border-bottom: 1px groove #eee;
+}
+
+.currents{
+    background-color: tomato;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+
+    transition: all 0.5s;
+}
+
+.currents:hover{
+    background-color: rgb(252, 113, 88);
+    box-shadow: 2px 5px 10px #111;
+    transform: translateY(-1px);
+}
+
+.sidebarlinks{
+    transition: all 0.4s;
+}
+
+.sidebarlinks:hover{
+    background-color: #444;
+    border-radius: 7px;
+}
+/* End Left Sidebar  */
+
+/* Start Top Sidebar  */
+.searchinputs{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid rgb(112, 110, 110);
+    border-radius: 0;
+}
+
+.searchinputs:focus{
+    background-color: transparent;
+    color: #fff;
+    box-shadow: none;
+    border-bottom: 2px solid #e82107;
+}
+
+.searchbtns{
+    border-radius: 50%;
+
+    transition: all 0.5s;
+}
+
+.searchbtns:hover{
+    transform: translateY(-1px);
+}
+
+.breadcrumb a{
+    color: #f4f4f4;
+}
+
+@media(max-width:760px){
+    .sidebars{
+        height: auto;
+        position: static;
+    }
+
+    .topnavbars{
+        position: static;
+    }
+}
+
+.iconparents{
+    position: relative;
+}
+
+.iconbullets::after{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: tomato;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+/* End Top Sidebar  */
+
+/* END NAVBAR  */
+
+/* START CARD  */
+.cardcommons{
+    box-shadow: 1px 2px 5px #999;
+    border-top: 1px groove darkorange;
+    border-left: 1px groove darkorange;
+
+    transition: all 0.5s;
+}
+
+.cardcommons:hover{
+    box-shadow: 1px 3px 15px #999;
+    transform: translateY(-1px);
+
+    border: none;
+
+    border-bottom: 1px groove darkorange;
+    border-right: 1px groove darkorange;
+}
+/* END CARD  */
+
+
+/* START PROGRESS AND  TASK SECTION */
+.taskborders{
+    border-left: 3px solid tomato;
+}
+/* END PROGRESS AND  TASK SECTION */

@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+/* Start Header  */
+header{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../assets/img/etc/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    position: relative;
+}
+
+/* Start Navbar */
+.navbar{
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    padding: 20px 30px;
+    transition: all 0.7s;
+}
+
+.navmenus{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8));
+    padding: 5px 30px;
+
+}
+
+.menuitems{
+    color: #eee;
+    /* font-size: 13px; */
+    letter-spacing: 1px;
+    
+}
+
+.menuitems:hover{
+    color: #1a99e8;
+}
+
+.line1,.line2,.line3{
+    width: 23px;
+    height: 3px;
+    color: #fff;
+    margin: 5px;
+
+    transition: all 0.5s;
+}
+
+.changes .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.changes .line2{
+    opacity: 0;
+}
+
+.changes .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/* End Navbar  */
+
+
+/* Start Banner */
+.banners{
+    width: 80%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.bannerheaders{
+    animation-name: bnani;
+    animation-duration: 2s;
+    /* animation-delay: 0.5s; */
+}
+
+.bannerpghs{
+    animation-name: bnani;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+
+    animation-fill-mode: backwards;
+}
+
+@keyframes bnani {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+/* End Banner  */
+
+/* End Header  */
+
+
+/* Start Mission Session  */
+.missions{
+    background-color: rgb(64, 63, 65);
+}
+
+.underlines{
+    width: 150px;
+    border: 3px solid #eee;
+}
+
+.cameraimgs.fromlefts{
+    animation-name: myanifromleft;
+    animation-duration: 3s;
+}
+
+.missiontexts.fromrights{
+    animation-name: myanifromright;
+    animation-duration: 3s;
+}
+
+@keyframes myanifromleft{
+    from{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes myanifromright{
+    from{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/* End Mission Session */
+
+
+/* Start Collection Section */
+.card{
+    position: relative;
+}
+
+.cardshadows{
+    box-shadow: 5px 8px 20px #444;
+}
+
+.headings{
+    width: 70%;
+    background-color: #222;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 70%;
+    right: 0;
+
+    opacity: 0.7;
+
+    transition: all 0.5s;
+
+}
+
+.headings:hover{
+    opacity: 1;
+}
+/* End Collection Section */
+
+
+/* Start Gallery section */
+.darkunderlines{
+    width: 150px;
+    border: 3px solid;
+}
+
+.gallerylists{
+    color: #777;
+    cursor: pointer;
+}
+
+.gallerylists.activeitems{
+    color:#06b7bd;
+}
+/* End Gallery Section  */
+
+
+/* Start Customer Section  */
+.customers{
+    background-color: #17111f;
+}
+/* End Customer Section  */
+
+
+/* Start Pricing Section  */
+.cardones,.cardtwos,.cardthrees{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url('../assets/img/etc/camerabg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 7px 18px 50px #555;
+}
+
+.carditems{
+    width: 55%;
+    border-bottom: 1px solid #eee;
+
+    margin: auto;
+}
+
+.cardbuttons{
+    width: 130px;
+    background-color: tomato;
+    border-radius: 25px;
+    box-shadow: 5px 8px 20px #000;
+}
+
+.cardbuttons:hover{
+    background-color: rgb(207, 77, 54);
+    transform: translateY(-2px);
+}
+
+.cardones.movefromlefts{
+    animation-name: movefromlefts;
+    animation-duration: 2s;
+}
+
+.cardtwos.movefrombottoms{
+    animation-name: movefrombottoms;
+    animation-duration: 2s;
+}
+
+.cardthrees.movefromrights{
+    animation-name: movefromrights;
+    animation-duration: 2s;
+}
+
+
+
+@keyframes movefromlefts{
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefrombottoms{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes movefromrights{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+/* End Pricing Section  */
+
+
+/* Start Contact Section  */
+.contacts{
+    background-image: linear-gradient(
+    105deg,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.9) 50%,
+    transparent 50%
+
+
+    ),url('../assets/img/etc/lady.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inputs{
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+
+    border-radius: 0;
+}
+
+.inputs:focus{
+    background: transparent;
+    border-color: transparent;
+    border-bottom: 2px solid tomato;
+    color: #fff;
+
+    /* bez of form control = bootstrap style  */
+    box-shadow: none;
+}
+
+.submitbuttons{
+    background-color: tomato;
+    transition: all 0.5s;
+}
+
+.submitbuttons:hover{
+    background-color: rgb(207, 77, 54);
+    transform: translateY(-2px);
+}
+
+.labels{
+    display: block;
+    color: #999;
+    font-size: 15px;
+    margin-left: 4px;
+    margin-top: -60px;
+
+    transition: all 0.3s;
+}
+
+.inputs:placeholder-shown + .labels{
+    visibility: hidden;
+    transform: translate(20px,20px);
+}
+/* End Contact Section  */
+
+
+/* Start Footer Section */
+.footerlinks{
+    font-size: 15px;
+    text-decoration: none;
+    color: #eee;
+
+    transition: all 0.5s;
+}
+
+.footerlinks:hover{
+    color: skyblue;
+}
+/* End Footer Section  */

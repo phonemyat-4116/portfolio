@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loading Effect</title>
+</head>
+<style type="text/css">
+    body{
+        height: 100vh;
+        background-color: #0b1734;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+    }
+
+    .container{
+        width: 100px;
+        height: 100px;
+        /*background-color: #fff;*/
+        position: relative;
+
+        transform: rotate(45deg);
+
+        animation-name: myani;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    span{
+        width: 50px;
+        height: 50px;
+
+        position: absolute;
+
+        animation-name: myrotate;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    span:nth-child(1){
+        top: 0;
+        left: 0;
+        background-color: yellow;
+    }
+    span:nth-child(2){
+        top: 0;
+        right: 0;
+        background-color: green;
+    }
+    span:nth-child(3){
+        bottom: 0;
+        left: 0;
+        background-color: red;
+    }
+    span:nth-child(4){
+        bottom: 0;
+        right: 0;
+        background-color: blue;
+    }
+
+    @keyframes myani {
+        0%{
+            width: 100px;
+            height: 100px;
+        }
+        50%{
+            width: 150px;
+            height: 150px;
+        }
+        100%{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    @keyframes myrotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        10%{
+            transform: rotate(0deg);
+        }
+        90%,100%{
+            transform: rotate(90deg);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+</body>
+</html>

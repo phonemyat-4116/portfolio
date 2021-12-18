@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&family=Merriweather:ital,wght@1,300&display=swap');
+/* Start Header Section  */
+body{
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Cardo', serif;
+
+    /* overflow-x: hidden; */
+    
+}
+.stars{
+    font-size: 30px;
+}
+
+/* Start Navbar */
+.navbtns{
+    background: linear-gradient(90deg,rgb(235, 164, 12),orange);
+    
+}
+
+.navbtns:hover{
+    background: linear-gradient(90deg,orange,rgb(235, 164, 12));
+
+}
+/* End Navbar  */
+
+/*Start banner section  */
+.bgimgs{
+    background-image: linear-gradient(90deg,rgb(238, 213, 166) 0%,rgb(238, 213, 166) 50%,transparent 60%),url('../img/img3.jpg');
+
+    background-position: center;
+    background-size: cover;
+}
+
+.text1s{
+    font-size: 20px;
+    color: rgb(233, 115, 18);
+}
+
+.bannerh1s{
+    animation-name: myani1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+.bannerps{
+    animation-name: myani1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.2s;
+
+    animation-fill-mode: backwards;
+
+}
+
+.bannerbtns{
+    background-color: orange;
+    padding: 15px 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    z-index: 0;
+
+    animation-name: myani1;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+
+    animation-fill-mode: backwards;
+
+
+}
+
+.bannerbtns::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: all 0.5s;
+
+}
+
+.bannerbtns:hover::before{
+    transform: scaleX(1);
+
+}
+
+@keyframes myani1{
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* End banner section  */
+
+@media(max-width: 600px){
+    .bgimgs{
+        background: linear-gradient(180deg,rgb(238, 213, 166),rgb(238, 213, 166));
+        
+    }
+}
+
+/* End Header Section  */
+
+
+/* Start Service Section  */
+.servicepad1s{
+    padding: 100px 0;
+}
+
+.cardbtns{
+    text-decoration: none;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #000;
+
+    transition: all 0.5s;
+}
+
+.cardbtns:hover{
+    color: orange;
+    font-size: 19px;
+    border-bottom: 3px solid orange;
+
+}
+
+.servicecard1s,.servicecard2s,.servicecard3s{
+
+    transition: all 0.5s;
+}
+
+.servicecard1s:hover,.servicecard2s:hover,.servicecard3s:hover{
+    border: 1px solid #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+
+}
+/* End Service Section  */
+
+
+/* Start Philosophy Section  */
+.philobgs{
+    /* background: linear-gradient(
+        rgb(238, 213, 166) 0%,
+        rgb(238, 213, 166) 20%,
+        transparent 20%,
+    ),url('../img4.jpg'); */
+
+    background-color: rgb(238, 213, 166);
+
+    display: flex;
+    justify-content: end;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+.philoimgs{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+.philotexts{
+    padding-left: 200px;
+    text-align: justify;
+}
+
+@media(max-width: 600px){
+    .philotexts{
+        width: 500px;
+        padding: 30px 50px;
+        text-align: justify;
+
+    }
+}
+/* End Philosophy Section  */
+
+
+/* Start Pricing Section  */
+
+.pricingbgs{
+    background: linear-gradient(
+        orange 55%,
+        #fff 50%
+    );
+
+}
+
+.pricingtexts{
+    width: 700px;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.cardtitles{
+    width: 300px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgb(212, 209, 206);
+
+    margin: auto
+}
+
+.pricingbtns{
+    background-color: orange;
+    padding: 15px 25px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.pricingbtns::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: all 0.5s;
+}
+
+.pricingbtns:hover::before{
+    transform: scaleX(1);
+}
+
+.pricingcard1s{
+    transition: all 0.5s;
+}
+
+.pricingscrolls.movefromlefts{
+    animation-name: movefromlefts;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+     /* transition: all 0.5s; */
+    
+}
+
+.pricingcard2s{
+    transition: all 0.5s;
+}
+
+.pricingscrolls.movefrombottoms{
+    animation-name: movefrombottoms;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+     /* transition: all 0.5s; */
+    
+}
+
+.pricingcard13s{
+    transition: all 0.5s;
+}
+
+.pricingscrolls.movefromrights{
+    animation-name: movefromrights;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+     /* transition: all 0.5s; */
+    
+}
+
+@keyframes movefromlefts{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes movefrombottoms{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes movefromrights{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* End Pricing Section  */
+
+
+/* Start FAQ Section  */
+.faqcontainers{
+    width: 450px;
+    padding: 0 50px;
+
+    /* position: relative; */
+}
+
+.faqs{
+    position: relative;
+
+}
+
+.faqtoggles{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    color: orange;
+
+    position: absolute;
+    top: 0;
+    left: -3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faqtitles{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.faqtexts{
+    font-size: 17px;
+    display: none;
+
+}
+
+.faqs.active .faqtexts{
+    display: block;
+    
+}
+
+.faqtoggles .fa-minus{
+    display: none;
+}
+
+.faqtoggles .fa-plus{
+    display: block;
+}
+
+.faqs.active .faqtoggles .fa-minus{
+    display: block;
+}
+
+.faqs.active .faqtoggles .fa-plus{
+    display: none;
+}
+
+.faqs.active .faqtitles{
+    color: orange;
+}
+
+.faqbgcontainers{
+    width: 600px;
+    height: 600px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.faqbgs{
+    width: 300px;
+    height: 400px;
+    background-color: rgb(240, 230, 222);
+}
+
+.img5s,.img6s{
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+}
+
+.img5s{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.img6s{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media(max-width: 600px){
+    .img5s,.img6s{
+        width: 240px;
+        
+    }
+}
+/* End FAQ Section  */
+
+/* Start Blog Section  */
+.blogps{
+    transition: color 0.5s;
+}
+
+.blogps:hover{
+    color: orange;
+    cursor: pointer;
+}
+/* End Blog Section  */
+
+
+/* Start Footer Section  */
+.ficons{
+    font-size: 28px;
+    margin: 0 10px;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.ficons:hover{
+    transform: translateY(-8px);
+    color: orange;
+}
+
+.flinks{
+    /* width: 50px; */
+    text-decoration: none;
+    color: rgb(182, 180, 179);
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.flinks:hover{
+    color: #fff;
+    text-decoration: underline;
+
+}
+/* End  Footer Section  */
+
+
+
+
+
+
+
